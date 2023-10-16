@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+  font-family: monospace, cursive;
+  font-weight: 900;
+  border-radius: 15px;
+  color: black;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.calculator {
+  width: 350px;
+  height: 500px;
+  background-color: skyblue;
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  padding: 5px;
+  gap: 1px;
+}
+.calculator .screen {
+  margin: 10px;
+  padding: 10px;
+  gap: 1px;
+  flex-basis: 100px;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+  text-align: right;
+  border: 5px solid white;
+}
+.calculator .btnbox {
+  margin: 5px;
+  padding: 5px;
+  flex-basis: 400px;
+  gap: 1px;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffc0cb;
+  border: 3px solid #000080;
+}
+
+.btnrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 5px;
+}
+.btnrow2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 5px;
+}
+
+.box1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.box1_1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 5px;
+  margin-left: 2px;
+  gap: 7px;
+}
+.box2 {
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 2px;
+  gap: 1px;
+}
+
+.opbtn {
+  display: flex;
+  width: 55px;
+  height: 55px;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  border: 3px solid #cccccc;
+  transition: background-color 0.2s;
+}
+.opbtn2 {
+  display: flex;
+  width: 55px;
+  height: 85%;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border: 3px solid #cccccc;
+  transition: background-color 0.2s;
+}
+.opbtn:hover {
+  background-color: #cccccc;
+}
+.opbtn2:hover {
+  background-color: #cccccc;
+}
+
+.red {
+  background-color: IndianRed;
+  color: white;
+}
+.grey {
+  background-color: grey;
+  color: white;
+}

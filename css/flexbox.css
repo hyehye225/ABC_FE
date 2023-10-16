@@ -1,0 +1,48 @@
+#container {
+  display: flex;
+  width: 800px;
+  height: 500px;
+  margin: 0 auto;
+}
+#container > div {
+  border: 2px solid red;
+  margin: 2px;
+  display: flex;
+  gap: 1px;
+  flex-direction: column;
+}
+#container > div > div {
+  margin: 5px;
+}
+#d1 {
+  flex-grow: 0;
+  align-items: center;
+}
+#d1 > div {
+  width: 70%;
+  border: 1px dotted red;
+}
+#d2 {
+  flex-grow: 1;
+}
+#d2 > div {
+  border: 1px dotted blue;
+}
+#d2 .d2_1 {
+  flex-grow: 2;
+}
+#d2 .d2_2 {
+  flex-grow: 1;
+}
+#d3 {
+  flex-grow: 5;
+}
+#d3 > div {
+  border: 1px dotted blue;
+}
+#d3 .d3_1 {
+  flex-grow: 4.5;
+}
+#d3 .d3_2 {
+  flex-grow: 1;
+}

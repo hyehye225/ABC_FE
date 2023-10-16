@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  padding: 0;
+  border: 2px solid blue;
+  width: 100vw;
+  height: 100vh;
+}
+
+#container {
+  width: 300px; /* 컨텐츠 영역*/
+  height: 300px; /* 컨텐츠 영역*/
+
+  /* boarder부터 inner 컨텐츠 까지의 공백. */
+  padding: 20px;
+  margin: 150px;
+
+  background-color: yellow;
+  border: 10px solid red;
+}
+
+#inner {
+  /* display: block; */
+  width: 100%;
+  height: 100%;
+
+  /* border: 20px solid green; */
+  background-color: lightgreen;
+
+  /* 설정 시 border-box가 아니면 넘치게 됨.*/
+  padding: 20px;
+  border: 10px solid black;
+
+  /* 마진을 설정하면 전체 박스를 기준으로 움직인다. */
+  margin: 100px;
+}
+
+/* 설정하면 inner가 240, 미설정시 300 기본값:content-box */
+* {
+  box-sizing: border-box;
+}

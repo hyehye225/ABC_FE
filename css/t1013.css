@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+
+  /* 중앙 정렬 */
+  display: flex;
+
+  flex-direction: row;
+  /* 플렉스 디렉션과 같은 방향 */
+  justify-content: center;
+  /* 플렉스 디렉션과 90도 방향 */
+  align-items: flex-start;
+}
+
+.container {
+  width: 70vw;
+  height: 50vh;
+
+  display: flex;
+  gap: 1px;
+  flex-direction: row;
+  /* border: 10px dashed blue; */
+}
+
+/* body의 플렉스 하위 요소  */
+.wrapper--1 {
+  border: 2px solid red;
+
+  /* 하위 요소를 표시하기 위한 flex 설정 */
+  display: flex;
+  flex-direction: column;
+  /* 컬럼 기준 - 상하 설정 */
+  justify-content: flex-start;
+  /* 컬럼 기준 - 좌우 설정 */
+  align-items: center;
+
+  gap: 5px;
+  padding: 10px;
+}
+/* 특정성(Specificity): 특정성 값이 높은 스타일 규칙이 다른 규칙보다 우선합니다.
+    나중에 정의된 규칙: 나중에 정의된 스타일 규칙이 먼저 정의된 규칙을 덮어씁니다.
+  
+    1.인라인 스타일(Inline Styles): HTML 요소에 직접 style 속성을 사용하여 지정된 스타일 규칙은 가장 높은 특정성을 갖습니다. 예를 들어, <div style="color: red;">와 같이 HTML 요소에 인라인 스타일을 지정하면 해당 스타일은 다른 모든 스타일 규칙보다 우선합니다.
+    2.아이디 선택자(ID Selectors): 아이디(ID) 선택자는 # 기호와 아이디 이름으로 정의됩니다. 예를 들어, #my-element와 같은 선택자는 아이디를 가리키며, 아이디 선택자는 클래스나 태그 선택자보다 더 높은 특정성을 갖습니다.
+    3.클래스 및 속성 선택자(Class and Attribute Selectors): 클래스 선택자(.class-name)와 속성 선택자([attribute="value"])는 클래스와 속성을 기반으로 요소를 선택합니다. 이러한 선택자들은 태그 선택자보다 더 높은 특정성을 갖습니다.
+    4.태그 선택자(Element Selectors): 태그 이름으로 요소를 선택하는 것은 가장 낮은 특정성을 갖습니다. 예를 들어, div와 같은 태그 선택자는 다른 모든 선택자보다 낮은 특정성을 가집니다.
+  */
+.wrapper--1 > .box {
+  border: 1px dotted red;
+  width: 40px;
+  height: 40px;
+}
+.wrapper--2 {
+  border: 2px solid red;
+
+  display: flex;
+  flex-direction: column;
+  /* flex: 1 1 0과 같이 flex-grow, flex-shrink, flex-basis 속성을 비율로 설정한 경우, 상위 요소에서 justify-content 속성을 설정하지 않아도 될  */
+  /* stretch , flex-start , flex-end , center , baseline */
+  align-items: center;
+  padding: 10px;
+  /* 자식 속성의 중간 간격을 지정하기 위해 필요하다.*/
+  gap: 5px;
+}
+
+.wrapper--3 {
+  border: 2px solid red;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 10px;
+  gap: 5px;
+}
+/*
+   아이콘들이 전부 박스 클래스다.
+   빨간색??
+  */
+.box {
+  width: 100%;
+  border: 1px dotted blue;
+}
+
+/* 플렉스 사이즈의 약자
+    숫자가 0으로 설정되면, 아이템은 초기 크기를 가지지 않으며, 나머지 공간에 따라 동적으로 크기가 조정
+    auto : 자식 요소의 크기에 따라 조정
+  */
+.fsz1 {
+  flex: 1 1 0;
+}
+
+.fsz2 {
+  flex: 2 1 0;
+}
+
+.fsz3 {
+  flex: 3 1 0;
+}
+
+.fsz4 {
+  flex: 4 1 0;
+}
+
+.fsz5 {
+  flex: 5 1 0;
+}
+
+.fsz6 {
+  flex: 6 1 0;
+}
+
+.fsz7 {
+  flex: 7 1 0;
+}
+
+.fsz8 {
+  flex: 8 1 0;
+}
+
+.fsz9 {
+  flex: 9 1 0;
+}
+
+.fsz10 {
+  flex: 10 1 0;
+}
+
+.center-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 텍스트에만 적용 가능한 방법 */
+.center-text2 {
+  text-align: center;
+}
+
+.center-text2__1 {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}

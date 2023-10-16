@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+  font-family: monospace, cursive;
+  color: #000;
+  font-weight: 900;
+  padding: 5px;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.calculator {
+  width: 350px;
+  height: 500px;
+  background-color: cornflowerblue;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  border: solid 6px #ffc0cb; /* 이 속성을 추가해 주세요! */
+}
+.calculator > div {
+  margin: 5px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+#screen {
+  flex-grow: 2;
+  text-align: right;
+  font-size: large;
+  background-color: #222;
+  color: white;
+}
+
+#buttonbox {
+  flex-grow: 7;
+  display: flex;
+  flex-direction: column;
+}
+#buttonbox > div {
+  margin: 2px;
+  border-radius: 10px;
+}
+
+#buttonbox #opbox {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: space-around;
+  background-color: skyblue;
+  align-items: center;
+}
+#opbox .opbtn {
+  width: 50%;
+  height: 60%;
+  background-color: yellow;
+  font-size: medium;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 3px solid orange; /* 이 속성을 추가해 주세요! */
+}
+
+#buttonbox #numbox {
+  flex-grow: 5;
+  background-color: cornflowerblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 5px;
+}
+#buttonbox #numbox .box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 5px;
+  height: 60%;
+}
+#buttonbox #numbox .box .numbtn {
+  background-color: #ffc0cb;
+  border-radius: 10px;
+  width: 50%;
+  height: 100%;
+  font-size: large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s;
+}
+#buttonbox #numbox .box .numbtn:hover {
+  background-color: palevioletred;
+}

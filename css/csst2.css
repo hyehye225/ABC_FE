@@ -1,0 +1,89 @@
+.block1 {
+  width: 500px;
+  height: 800px;
+  padding: 10px;
+  border: 1px solid red;
+}
+
+.block1_1 {
+  width: 100%;
+  height: 300px;
+  background-color: bisque;
+  border: 1px solid green;
+}
+
+.block1_2 {
+  margin-top: -1px;
+  width: 100%;
+  height: 300px;
+  background-color: bisque;
+  border: 1px solid green;
+}
+
+/* 자식 속성, 중첩된 또 다른 요소나 계층 구조에 속한 요소는 선택되지 않음. */
+.block1_1 > p {
+  color: blue;
+}
+
+/* 후손 속성, 모든 요소가 해당.*/
+.block1_1 p {
+  background-color: blueviolet;
+}
+
+/* 이벤트를 걸 수 있다. */
+/* .block1_1:hover {
+    background-color:blueviolet;
+  } */
+/* 형제 태그만 선택*/
+.block1_1_1_p ~ span {
+  color: red;
+}
+
+/* 체크된 인풋에 인접한 span, +를 선택하면 인접 1개만 */
+input:checked + span {
+  background-color: red;
+}
+
+/******/
+/* radio : 비선택, password*/
+/* input:not([type="password"]) + span{ 
+    color: yellowgreen
+  } */
+
+/*해당 인풋 타입인 경우.*/
+input[type="radio"]:valid + span {
+  color: blue;
+}
+/******/
+
+/*
+    전체 자식을 기준으로 p일 경우만 
+    홀수 '>' 붙으면 자식만  
+  */
+/* .block1_2 > p:nth-child(2n+1) {
+    color: red;
+  } */
+
+/*
+    p 요소만 셈
+    홀수 '>' 붙으면 자식만  
+    */
+/* .block1_2 > p:nth-of-type(2n+1) {
+    color: blue
+  } */
+
+/* .block1_2 > p:nth-last-of-type(2n) {
+    color: blue
+  } */
+
+/* 블록기준 첫 번째 자식 엘리먼트를 선택합니다. */
+/* p:first-child {
+    color:chocolate
+  }  */
+
+/*
+   마지막에서 2번째 엘리멘트
+  */
+div:nth-last-child(2) {
+  background-color: chocolate;
+}

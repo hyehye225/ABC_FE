@@ -1,0 +1,18 @@
+* {
+  box-sizing: border-box;
+  text-align: center;
+}
+.container h2 {
+}
+#info {
+}
+#goal {
+  width: 300px;
+  margin: 0 auto;
+  /* border: 2px solid green; */
+}
+#goal hr {
+  background: green;
+  height: 1px;
+  border: 0;
+}
